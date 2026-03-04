@@ -11,8 +11,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('pages.users');
-        log('hello');
+        return view('Admin.Users.users');
     }
 
     /**
@@ -20,7 +19,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Users.register');
     }
 
     /**

@@ -16,5 +16,16 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [Controller::class,'index'])->name('dashboard');
-Route::get('/users', [UserController::class,'index'])->name('users');
+Route::get('/', [Controller::class, 'index'])->name('dashboard');
+
+
+Route::prefix('users')->group(function(){
+
+    Route::get('/', [UserController::class,'index'])->name('users');
+
+    Route::get('/register', [UserController::class,'create'])
+        ->name('users.register');
+
+    Route::post('/register', [UserController::class,'store'])
+        ->name('users.store');
+});

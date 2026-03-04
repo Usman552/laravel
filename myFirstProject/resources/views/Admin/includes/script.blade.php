@@ -100,7 +100,7 @@
   window.addEventListener("scroll", function () {
     const navbar = document.getElementById("navbarBlur");
 
-    if (window.scrollY > 100) {
+    if (window.scrollY > 40) {
       navbar.classList.add("navbar-scrolled");
     } else {
       navbar.classList.remove("navbar-scrolled");
