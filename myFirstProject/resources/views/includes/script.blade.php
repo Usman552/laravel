@@ -96,3 +96,14 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
+  <script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbarBlur");
+
+    if (window.scrollY > 100) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+</script>

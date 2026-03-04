@@ -23893,7 +23893,26 @@ hr.horizontal.gray-light {
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
   display: block;
   overflow: auto;
-  height: calc(100vh - 360px);
+
+}
+
+#navbarBlur {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Scroll hone ke baad */
+#navbarBlur.navbar-scrolled {
+  position: fixed;
+  top: 20px;
+  width: calc(100% - 310px);
+  margin-left: 220px;
+  z-index: 1050;
+  background: rgba(52, 71, 103, 0.69);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(52, 71, 103, 0.3);
 }
 
 .navbar-vertical.navbar-expand-xs>[class*=container] {
@@ -23969,6 +23988,11 @@ hr.horizontal.gray-light {
   padding-bottom: 0.3333333333rem;
   padding-left: 15px;
 }
+@media (max-width: 768px) { /* mobile/tablet devices */
+  #navbarBlur.navbar-scrolled {
+    width: 90%;
+  }
+}
 
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav .nav-link>span.sidenav-normal {
   transition: all 0.1s ease 0s;
@@ -23987,6 +24011,7 @@ hr.horizontal.gray-light {
     box-shadow: none;
     z-index: 9999;
   }
+
 
   .navbar-vertical.navbar-expand-sm .navbar-collapse {
     display: block;
@@ -24015,6 +24040,7 @@ hr.horizontal.gray-light {
   .navbar-vertical.navbar-expand-sm.fixed-start {
     left: 0;
   }
+ 
 
   .navbar-vertical.navbar-expand-sm.fixed-end {
     right: 0;
@@ -24189,6 +24215,7 @@ hr.horizontal.gray-light {
     box-shadow: none;
     z-index: 9999;
   }
+ 
 
   .navbar-vertical.navbar-expand-lg .navbar-collapse {
     display: block;
